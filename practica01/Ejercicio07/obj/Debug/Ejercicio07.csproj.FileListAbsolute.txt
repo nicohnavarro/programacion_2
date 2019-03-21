@@ -5,3 +5,10 @@ C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica01\Ejercicio07\o
 C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica01\Ejercicio07\obj\Debug\Ejercicio07.csproj.CoreCompileInputs.cache
 C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica01\Ejercicio07\obj\Debug\Ejercicio07.exe
 C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica01\Ejercicio07\obj\Debug\Ejercicio07.pdb
+D:\nicolasNavarro\programacion_2\practica01\Ejercicio07\bin\Debug\Ejercicio07.exe.config
+D:\nicolasNavarro\programacion_2\practica01\Ejercicio07\bin\Debug\Ejercicio07.exe
+D:\nicolasNavarro\programacion_2\practica01\Ejercicio07\bin\Debug\Ejercicio07.pdb
+D:\nicolasNavarro\programacion_2\practica01\Ejercicio07\obj\Debug\Ejercicio07.csprojAssemblyReference.cache
+D:\nicolasNavarro\programacion_2\practica01\Ejercicio07\obj\Debug\Ejercicio07.csproj.CoreCompileInputs.cache
+D:\nicolasNavarro\programacion_2\practica01\Ejercicio07\obj\Debug\Ejercicio07.exe
+D:\nicolasNavarro\programacion_2\practica01\Ejercicio07\obj\Debug\Ejercicio07.pdb

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio05
+namespace Ejercicio04
 {
     class Program
     {
@@ -12,7 +12,7 @@ namespace Ejercicio05
         {
             int numero;
             int sumatoria=0;
-            Console.Title = "Ejercicio Nro 05";
+            Console.Title = "Ejercicio Nro 04";
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Ingrese el numero :");
             bool a = int.TryParse(Console.ReadLine(), out numero);
