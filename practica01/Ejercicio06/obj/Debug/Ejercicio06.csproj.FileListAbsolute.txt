@@ -1,0 +1,12 @@
+D:\VisualStudio\nicolasNavarro\Ejercicio01\Ejercicio06\bin\Debug\Ejercicio06.exe.config
+D:\VisualStudio\nicolasNavarro\Ejercicio01\Ejercicio06\bin\Debug\Ejercicio06.exe
+D:\VisualStudio\nicolasNavarro\Ejercicio01\Ejercicio06\bin\Debug\Ejercicio06.pdb
+D:\VisualStudio\nicolasNavarro\Ejercicio01\Ejercicio06\obj\Debug\Ejercicio06.csproj.CoreCompileInputs.cache
+D:\VisualStudio\nicolasNavarro\Ejercicio01\Ejercicio06\obj\Debug\Ejercicio06.exe
+D:\VisualStudio\nicolasNavarro\Ejercicio01\Ejercicio06\obj\Debug\Ejercicio06.pdb
+C:\Users\nicolas\Desktop\nicolas\UTN\programacion_2\practica01\Ejercicio06\bin\Debug\Ejercicio06.exe.config
+C:\Users\nicolas\Desktop\nicolas\UTN\programacion_2\practica01\Ejercicio06\bin\Debug\Ejercicio06.exe
+C:\Users\nicolas\Desktop\nicolas\UTN\programacion_2\practica01\Ejercicio06\bin\Debug\Ejercicio06.pdb
+C:\Users\nicolas\Desktop\nicolas\UTN\programacion_2\practica01\Ejercicio06\obj\Debug\Ejercicio06.csproj.CoreCompileInputs.cache
+C:\Users\nicolas\Desktop\nicolas\UTN\programacion_2\practica01\Ejercicio06\obj\Debug\Ejercicio06.exe
+C:\Users\nicolas\Desktop\nicolas\UTN\programacion_2\practica01\Ejercicio06\obj\Debug\Ejercicio06.pdb
