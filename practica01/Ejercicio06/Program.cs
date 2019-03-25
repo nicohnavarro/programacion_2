@@ -12,34 +12,23 @@ namespace Ejercicio06
         {
             Console.Title = "Ejercicio Nro 06";
             Console.ForegroundColor = ConsoleColor.Green;
-            int cantNumeroPerf = 0;
-            int sumatoria = 0;
-            for(int i=1;i<100;i++)
-            {
-                for(int j=1;j<i;j++)
-                {
-                    if (i % j == 0)
-                    {
-                        sumatoria += i;
-                        //Console.WriteLine("sumatoria {0}", sumatoria);
-                    }
-                }
-                if (sumatoria == i)
-                {
-                    Console.WriteLine("El numero es PERFECTO: {0}", i);
-                    cantNumeroPerf++;
-                    if(cantNumeroPerf==4)
-                    {
-                        Console.WriteLine("Hasta {0} Numero Perfecto", cantNumeroPerf);
-                        break;
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("El numero NO es perfecto: {0}", i);
-                }
+            int añoInicio=0;
+            int añoFin;
+            bool validarAñoIni;
+            bool validarAñoFin;
+            Console.WriteLine("Ingresa el año Inicial: ");
+            validarAñoIni = int.TryParse(Console.ReadLine(), out añoInicio);
+            Console.WriteLine("Ingresa el año Final: ");
+            validarAñoFin = int.TryParse(Console.ReadLine(), out añoFin);
 
+            for(int i=añoInicio;i<añoFin;i++)
+            {
+                if(i%4==0 || (i%400==0 && i%100==0))
+                {
+                    Console.WriteLine("{0} es bisiesto.", i);
+                }
             }
+
             Console.ReadLine();
         }
     }

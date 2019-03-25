@@ -4,37 +4,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio04
+namespace Ejecicio05
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int numero;
-            int sumatoria=0;
-            Console.Title = "Ejercicio Nro 04";
+            Console.Title = "Ejercicio Nro 05";
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Ingrese el numero :");
-            bool a = int.TryParse(Console.ReadLine(), out numero);
 
-            for(int i=1;i<numero;i++)
+            string numeroIngresado;
+            int numeroConvertido;
+
+            int auxNumero;
+            bool validar;
+            int suma = 0;
+            int suma2 = 0;
+
+            Console.WriteLine("Ingrese su centro numerico: ");
+            numeroIngresado = Console.ReadLine();
+            validar = int.TryParse(numeroIngresado, out numeroConvertido);
+
+            for(int j=numeroConvertido;j>0;j--)
             {
-                if(numero%i==0)
+                for (int i = 1; i < j; i++)
                 {
-                    sumatoria += i;
-                    Console.WriteLine("sumatoria {0}", sumatoria);
+                    suma += i;
                 }
+                suma2 = j + 1;
+                auxNumero = suma2;
+                do
+                {
+                    auxNumero++;
+                    suma2 += auxNumero;
+                } while (suma2 < suma);
+                if (suma == suma2)
+                {
+                    Console.WriteLine("El numero {0} es centro numerico.", j);
+                }
+                else
+                {
+                    Console.WriteLine("El  numero {0} no es centro numerico.", j);
+                }
+                suma = 0;
+                suma2 = 0;
+                auxNumero = 0;
             }
-
-            if(sumatoria==numero)
-            {
-                Console.WriteLine("El numero es PERFECTO: {0}", numero);
-            }
-            else
-            {
-                Console.WriteLine("El numero NO es perfecto: {0}", numero);
-            }
-            Console.ReadLine();
+            Console.ReadKey();
         }
     }
 }

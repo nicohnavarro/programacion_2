@@ -17,22 +17,26 @@ namespace Ejercicio04
 
             for(int i=1;i<=numero;i++)
             {
-
-                if (numero % i == 0)
+                for(int j=1;j<=i;j++)
                 {
-                    dividendos++;
+                    if (i % j == 0)
+                    {
+                        dividendos++;
+                    }
                 }
-            }
-            if (dividendos != 2)
-            {
-                Console.WriteLine("No es Primo");
-            }
-            else
-            {
-                Console.WriteLine("Si es Primo");
+                
+                if (dividendos ==1 || dividendos == 2)
+                {
+                    Console.WriteLine("{0}  es Primo", i);
+                }
+                else
+                {
+                   // Console.WriteLine("{0} No es Primo",i);
+                }
+                dividendos = 0;
             }
             Console.ReadLine();
         }
-        
+
     }
 }
