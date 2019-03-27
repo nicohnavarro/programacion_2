@@ -33,5 +33,12 @@ namespace Ejercicio13
             }
             return cadena;
         }
+        public static double BinarioDecimal(string b)
+        {
+            double resultado=0;
+
+            return resultado;
+        }
+            
      }
 }
