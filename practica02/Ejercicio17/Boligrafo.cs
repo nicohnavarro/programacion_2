@@ -57,15 +57,14 @@ namespace Ejercicio17
 
         public bool Pintar(int gasto,out string dibujo)
         {
-            bool retorno = true;
+            bool retorno = false;
             short gastoTinta;
             short tintaBoligrafo=GetTinta();
-            short cantidadSobrante;
             gastoTinta = (short)(gasto - (gasto * 2));
-            cantidadSobrante = (short)(gasto - tintaBoligrafo);
             dibujo = "";
             if (tintaBoligrafo>0)
             {
+                retorno = true;
                 SetTinta(gastoTinta);
                 
                 for (int i = 0; i < gasto; i++)
@@ -73,7 +72,6 @@ namespace Ejercicio17
                     dibujo += "*";
                 }
             }
-
             return retorno;
         }
     }
