@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ejercicio17
+namespace Ejercicio16
 {
     class Boligrafo
     {

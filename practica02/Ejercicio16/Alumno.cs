@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Ejercicio16
@@ -21,7 +22,9 @@ namespace Ejercicio16
         {
             if(this.nota1>4 && this.nota2>4)
             {
+                Thread.Sleep(200);
                 Random nota = new Random();
+                Thread.Sleep(200);
                 this.notaFinal = nota.Next(1, 10);
             }
             else
