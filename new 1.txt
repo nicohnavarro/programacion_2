@@ -1,0 +1,16 @@
+1- en tiempo de compilacion
+2- si
+3- no,todo igual cambia el tipo de retorno (error de compilacion)
+4- no
+5- parametros opcionales
+6- tipo de dato, numero y orden de parametros
+7- mas complejo al metodo mas simple
+8- no
+9- 
+10- 
+11- no tiene argumentos,se llama solo, solo 1 y no sobrecargado por unica vez y primero
+12- no
+13- no,  solo sobrecarga de constructores d ela misma clase
+14- si, solo desde adentro de la clase
+15- metodos adentro de constructores
+16- 

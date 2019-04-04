@@ -49,7 +49,7 @@ namespace Clase05
         {
             StringBuilder infoEstante = new StringBuilder();
             string returnInfo;
-            infoEstante.AppendFormat("Estante {0}", e._ubicacionEstante);
+            infoEstante.AppendFormat("Estante {0}\n", e._ubicacionEstante);
             foreach(Producto producto in e.GetProductos())
             {
                 if(!(Object.ReferenceEquals(producto,null)))
@@ -93,10 +93,16 @@ namespace Clase05
             return retorno;
         }
 
-
+        /// <summary>
+        /// Overload operator +
+        /// </summary>
+        /// <param name="e">estante</param>
+        /// <param name="p">producto</param>
+        /// <returns>true if add product at estante of false if not</returns>
         public static bool operator +(Estante e,Producto p)
         {
             bool retorno = false;
+            bool flag = false;
             int cantidad=0;
             foreach (Producto producto in e.GetProductos())
             {
@@ -104,9 +110,14 @@ namespace Clase05
                 {
                     cantidad++;
                     Console.WriteLine(cantidad);
+                    if(producto==p)
+                    {
+                        Console.WriteLine("Error este producto ya existe en el estante");
+                        flag = true;
+                    }
                 }
             }
-            if(cantidad>0 && cantidad<e.GetProductos().Length)
+            if(cantidad>=0 && cantidad<e.GetProductos().Length && !flag)
             {
                 retorno = true;
                 e.GetProductos()[cantidad] = p;
@@ -114,6 +125,7 @@ namespace Clase05
             else if(cantidad==e.GetProductos().Length)
             {
                 retorno = false;
+                Console.WriteLine("Error no hay mas espacio");
             }
             return retorno;
         }
