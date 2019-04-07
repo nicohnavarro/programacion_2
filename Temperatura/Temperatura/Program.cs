@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Temperatura
 {
@@ -10,6 +11,7 @@ namespace Temperatura
     {
         static void Main(string[] args)
         {
+            /*
             Console.Title = "Ejercicio Nro 21";
             Console.ForegroundColor = ConsoleColor.DarkGreen;
 
@@ -28,7 +30,11 @@ namespace Temperatura
                 , (temp3 + temp1).GetCantidadGrados(), (temp3 + temp2).GetCantidadGrados());
 
             Console.ReadKey();
+            */
 
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
         }
     }
 }
