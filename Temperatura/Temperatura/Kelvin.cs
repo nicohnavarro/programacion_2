@@ -42,7 +42,7 @@ namespace Temperatura
         /// <param name="c">Celsius</param>
         public static explicit operator Fahrenheit(Kelvin c)
         {
-            Fahrenheit auxTemp = new Fahrenheit(((c._cantidadGrados * 9) / 5) - 459.67);
+            Fahrenheit auxTemp = new Fahrenheit((((c._cantidadGrados - 273.15) * 9) / 5)+32);
             return auxTemp;
         }
 
