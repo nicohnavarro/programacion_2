@@ -36,6 +36,7 @@ namespace Ejercicio29
             {
                 foreach (Jugador jugador2 in equipo.jugadores)
                 {
+
                     if (jugador1 != jugador2 && equipo.jugadores.Count() < equipo.cantidadDeJugadores)
                     {
                         equipo.jugadores.Add(jugador1);
@@ -48,6 +49,20 @@ namespace Ejercicio29
                 }
             }
             return retorno;
+        }
+
+        public string ShowTeam()
+        {
+            StringBuilder infoTeam = new StringBuilder();
+            string infoEquipo;
+            infoTeam.AppendFormat("Nombre {0} \nCantidad Jugadores {1} \nJugadores: \n",this.nombre,this.cantidadDeJugadores);
+            foreach(Jugador jugador in this.jugadores)
+            {
+                infoTeam.AppendFormat("{0}", jugador.MostrarDatos());
+            }
+
+            infoEquipo = infoTeam.ToString();
+            return infoEquipo;
         }
     }
 }

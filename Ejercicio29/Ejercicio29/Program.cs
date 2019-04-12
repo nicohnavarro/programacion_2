@@ -14,7 +14,7 @@ namespace Ejercicio29
             Equipo equipo2 = new Equipo(11, "Juventus");
 
             Jugador jugador1 = new Jugador(35462712,"Messi",20,10);
-            Jugador jugador2 = new Jugador(35462712, "Mezzi", 30, 10);
+            Jugador jugador2 = new Jugador(35462712, "Messi", 30, 10);
             Jugador jugador3 = new Jugador(32262712, "Cristiano", 40, 10);
 
             if(equipo1+jugador1)
@@ -25,9 +25,13 @@ namespace Ejercicio29
             {
                 Console.WriteLine("no Se Agrego a Leo2");
             }
-
+            if (equipo1 + jugador3)
+            {
+                Console.WriteLine("Se Agrego a Ronaldo");
+            }
             Console.WriteLine(jugador1.MostrarDatos());
             Console.WriteLine(jugador3.MostrarDatos());
+            Console.WriteLine(equipo1.ShowTeam());
             Console.ReadKey();
 
 
