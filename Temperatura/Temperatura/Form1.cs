@@ -17,10 +17,7 @@ namespace Temperatura
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnConvertFa_Click(object sender, EventArgs e)
         {
@@ -87,7 +84,7 @@ namespace Temperatura
                     resultadoKe = kelvinGrados.GetCantidadGrados();
                     txtKelvin3.Text = resultadoKe.ToString();
 
-                    txtFahrenheit3.Text = (((Fahrenheit)kelvinGrados).GetCantidadGrados()).ToString();
+                    txtFahrenheit3.Text =String.Format("{0,5:#,###.0}",(((Fahrenheit)kelvinGrados).GetCantidadGrados()));
 
                     txtCelsius3.Text = (((Celsius)kelvinGrados).GetCantidadGrados()).ToString();
                 }
