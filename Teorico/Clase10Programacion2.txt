@@ -1,0 +1,21 @@
+Clases Abstractas
+Solo Sirve para Heredar
+Es la Primera de todas
+->Clase Persona abstracta
+generico
+especifico
+desbribe un marco es un modelo
+arriba en el marco jerarquico
+Las Clases abstractas no se puede instanciar
+Las clases que herendan de clases abstactas tiene que override el method
+abstracta
+
+Metodos Virtuales
+Igual que los metodos 
+implementacion 
+new para no virtual y virtuales
+son metodos nuevos 
+a.F() -> a.f
+b.F()->b.f
+a.G()->b.g
+b..G()->b.g
