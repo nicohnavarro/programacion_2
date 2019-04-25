@@ -25,9 +25,11 @@ namespace CentralitaHerencia
         #region Local Builders
         public Local(Llamada llamada,float costo): base(llamada.Duracion,llamada.NroDestino,llamada.NroOrigen)
         {
+            this.costo = costo;
         }
         public Local(string origen, float duracion, string destino,float costo) : base(duracion,destino,origen)
         {
+            this.costo = costo;
         }
         #endregion
 
@@ -35,7 +37,7 @@ namespace CentralitaHerencia
         private float CalcularCosto()
         {
             float costoTotal;
-            costoTotal = this.costo* this.Duracion;
+            costoTotal = costo* base.Duracion;
             return costoTotal;
         }
 
@@ -43,7 +45,7 @@ namespace CentralitaHerencia
         {
             string mostrar;
             StringBuilder mensaje = new StringBuilder();
-            mensaje.AppendFormat("{0}\nCosto de Llamada :{1}\n", base.Mostrar(), this.CostoLlamada);
+            mensaje.AppendFormat("{0}\nCosto de Llamada Local: ${1}\n", base.Mostrar(), this.CostoLlamada);
             mostrar = mensaje.ToString();
             return mostrar;
         }

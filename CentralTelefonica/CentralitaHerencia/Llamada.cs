@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace CentralitaHerencia
 {
+    #region Nested Types
+    public enum TipoLlamada
+    {
+        Local, Provincial, Todas
+    }
+    #endregion
+
     public class Llamada
     {
         #region Llamada Atributtes
@@ -52,21 +59,23 @@ namespace CentralitaHerencia
         {
             string mostrar;
             StringBuilder mensaje = new StringBuilder();
-            mensaje.AppendFormat("Duracion: {0}\nNumero de Origen: {1}\nNumero de Destino: {2}\n", this.Duracion,this.NroDestino,this.NroOrigen);
+            mensaje.AppendFormat("Duracion: {0}\nNumero de Origen: {1}\nNumero de Destino: {2}", this.Duracion,this.NroDestino,this.NroOrigen);
             mostrar = mensaje.ToString();
             return mostrar;
         }
 
         public int OrdenarPorDuracion(Llamada llamada1,Llamada llamada2)
         {
-            return 0;
-        }
-        #endregion
-
-        #region Nested Types
-        public enum TipoLlamada
-        {
-            Local,Provincial,Todas
+            int retorno = 0;
+            if(llamada1.Duracion>llamada2.Duracion)
+            {
+                retorno = 1;
+            }
+            else if(llamada1.Duracion < llamada2.Duracion)
+            {
+                retorno = -1;
+            }
+            return retorno;
         }
         #endregion
     }

@@ -8,28 +8,32 @@ namespace CentralitaHerencia
 {
     public class Centralita
     {
+
+        #region Centralita Atributtes
         private List<Llamada> listaDeLlamadas;
         protected string razonSocial;
+        #endregion
 
+        #region Centralita Properties
         public float GananciasPorLocal
         {
             get
             {
-                return CalcularGanancia(Llamada.TipoLlamada.Local);
+                return CalcularGanancia(TipoLlamada.Local);
             }
         }
         public float GananciasPorProvincial
         {
             get
             {
-                return CalcularGanancia(Llamada.TipoLlamada.Provincial);
+                return CalcularGanancia(TipoLlamada.Provincial);
             }
         }
         public float GananciasPorTotal
         {
             get
             {
-                return CalcularGanancia(Llamada.TipoLlamada.Todas);
+                return CalcularGanancia(TipoLlamada.Todas);
             }
         }
         public List<Llamada> Llamadas
@@ -39,7 +43,9 @@ namespace CentralitaHerencia
                 return listaDeLlamadas;
             }
         }
+        #endregion
 
+        #region Centralita Builders
         public Centralita()
         {
             listaDeLlamadas = new List<Llamada>();
@@ -49,15 +55,60 @@ namespace CentralitaHerencia
         {
             this.razonSocial = nombreEmpresa;
         }
+        #endregion
 
-        private float CalcularGanancia(Llamada.TipoLlamada tipo)
+        #region Centralita Methods
+        private float CalcularGanancia(TipoLlamada tipo)
         {
-            float resultado=0;
-            foreach(Llamada calls in listaDeLlamadas)
+            float ganancia=0;
+            foreach(Llamada call in listaDeLlamadas)
             {
-                if () 
+                if (tipo==TipoLlamada.Local && call is Local)
+                {
+                    Local localCall = (Local)call;
+                    ganancia += localCall.CostoLlamada;
+                }
+                else if(tipo == TipoLlamada.Provincial && call is Provincial)
+                {
+                    Provincial provinCall = (Provincial)call;
+                    ganancia += provinCall.CostoLlamada;
+                }
+                else if (tipo == TipoLlamada.Todas)
+                {
+                    if(call is Local)
+                    {
+                        Local localCall = (Local)call;
+                        ganancia += localCall.CostoLlamada;
+                    }
+                    else if(call is Provincial)
+                    {
+                        Provincial provinCall = (Provincial)call;
+                        ganancia += provinCall.CostoLlamada;
+                    }
+                }
             }
-            return resultado;
+            return ganancia;
         }
+
+        public string Mostrar()
+        {
+            StringBuilder mensaje = new StringBuilder();
+            mensaje.AppendFormat("\nRazon Social: {0} \nGanancia Total: ${1}" +
+                "\nGanancia por Llamados Locales: ${2} \nGanancia por Llamados Provinciales: ${3} \n-------------------------------------------------------" +
+                "\nDetalles de Llamadas... \n-------------------------------------------------------\n"
+                , razonSocial,GananciasPorTotal,GananciasPorLocal,GananciasPorProvincial);
+            foreach(Llamada call in listaDeLlamadas)
+            {
+                mensaje.AppendFormat("{0}", call.Mostrar());
+                mensaje.AppendLine("*******************************************************");
+            }
+            return mensaje.ToString();
+        }
+
+        public void OrdenarLlamadas()
+        {
+            listaDeLlamadas.Sort();
+        }
+        #endregion
     }
 }
