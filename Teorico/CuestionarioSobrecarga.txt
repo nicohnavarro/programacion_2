@@ -1,0 +1,38 @@
+1.	¿La sobrecarga se resuelve en tiempo de ejecución o en tiempo de compilación? 
+2.	¿Los métodos estáticos pueden ser sobrecargados? 
+3.	¿Se puede sobrecargar un método basados en un tipo de retorno diferente? 
+4.	¿Se tiene en cuenta el nombre de los parámetros para la sobrecarga? 
+5.	¿Qué técnica es una alternativa a la sobrecarga de métodos en los lenguajes que no la soportan? 
+6.	¿Qué debe cambiar para que la sobrecarga de un método sea válida? 
+7.	Si tenemos diferentes versiones de un mismo método, ¿cómo evitamos repetir código? 
+8.	¿Los métodos pueden tener el mismo nombre que otros elementos de una misma clase? (atributos, propiedades, etc). 
+9.	Repasar los ejercicios en la PPT “04-Sobrecarga.pptx”.
+10.	Para después de las clases de polimorfismo: ¿Cuál es la diferencia entre sobrecargar (overload) y sobrescribir (override)? 
+
+Sobrecarga de Constructores
+
+11.	 ¿Se pueden sobrecargar los constructores estáticos? 
+12.	  ¿Se puede llamar a un constructor estático con el operador “this”? 
+13.	¿Se puede llamar a constructores de otras clases con el operador “this”? 	
+14.	 ¿Se puede sobrecargar a un constructor privado?
+15.	 ¿Existe alguna alternativa al operador “this” a la hora de evitar repetir código o tareas en común entre los constructores? ¿Cuál?
+16.	Indique tres ejemplos distintos de sobrecargas para el constructor de la clase Persona sin repetir el criterio utilizado (ej. Cambiar el número de parámetros sólo se puede usar una vez):
+public Persona (string nombre, string apellido, int edad) {}
+
+
+1- en tiempo de compilacion
+2- si
+3- no,todo igual cambia el tipo de retorno (error de compilacion)
+4- no
+5- parametros opcionales
+6- tipo de dato, numero y orden de parametros
+7- mas complejo al metodo mas simple
+8- no
+9- 
+10- 
+11- no tiene argumentos,se llama solo, solo 1 y no sobrecargado por unica vez y primero
+12- no
+13- no,  solo sobrecarga de constructores d ela misma clase
+14- si, solo desde adentro de la clase
+15- metodos adentro de constructores
+16- 

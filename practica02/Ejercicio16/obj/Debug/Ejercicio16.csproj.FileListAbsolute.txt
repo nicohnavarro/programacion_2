@@ -1,7 +1,0 @@
-D:\NicolasNavarro\programacion_2\practica02\Ejercicio16\bin\Debug\Ejercicio16.exe.config
-D:\NicolasNavarro\programacion_2\practica02\Ejercicio16\bin\Debug\Ejercicio16.exe
-D:\NicolasNavarro\programacion_2\practica02\Ejercicio16\bin\Debug\Ejercicio16.pdb
-D:\NicolasNavarro\programacion_2\practica02\Ejercicio16\obj\Debug\Ejercicio16.csprojAssemblyReference.cache
-D:\NicolasNavarro\programacion_2\practica02\Ejercicio16\obj\Debug\Ejercicio16.csproj.CoreCompileInputs.cache
-D:\NicolasNavarro\programacion_2\practica02\Ejercicio16\obj\Debug\Ejercicio16.exe
-D:\NicolasNavarro\programacion_2\practica02\Ejercicio16\obj\Debug\Ejercicio16.pdb

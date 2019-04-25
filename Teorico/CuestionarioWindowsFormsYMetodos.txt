@@ -1,0 +1,40 @@
+Guía de Estudio: Windows Forms
+1. ¿Los formularios son objetos?
+2. ¿De qué clase heredan todos los formularios?
+3. ¿Qué es una partial class o clase parcial?
+4. ¿Puedo agregar parámetros de entrada a la clase del formulario? ¿Y
+sobrecargar el constructor? ¿Y declarar nuevos campos/propiedades?
+5. ¿Cuál es la diferencia entre Show() y ShowDialog()?
+6. ¿Qué es un formulario MDI? ¿Con qué propiedad indico que un
+formulario es un contenedor MDI? ¿Con qué propiedad del formulario
+hijo indico cuál es el formulario MDI padre?
+7. Detalle los pasos del ciclo de vida de los formularios.
+
+1-
+2-
+3- Designer para borrar un control y borrar  Clase parcial es una clase que dividis en dos archivos
+4- Si, sobrecargar y hacer otro constructor, declarar nuevos campos/propiedades tambien
+5- metodo .Show() && .ShowDialog() se tiene que cerrar primero antes que el padre
+6- MDI interfaz varios formularios adentro de uno is MDI container/ MDI parent
+7- new metodo que inicializa
+	load 
+	paint se dibuja y se hace visible
+	activated se ejecuta cuando recibe foco el formulario
+	formClousing 
+	formCloused
+	FormDiscoused
+
+Guía de Estudio: Sobrecarga de Operadores
+1. ¿Qué es un operador unario y que es un operador binario? De un ejemplo de cada uno.
+2. ¿Qué varía en la sintaxis de la sobrecarga de operadores unarios y binarios?
+3. Los operadores de casteo “(T)x” no se pueden sobrecargar. ¿Cuál es la alternativa?
+4. ¿Cuál es la diferencia entre una conversión implícita y una explícita?
+5. ¿Cuál es la diferencia entre castear (casting) y parsear (parsing)?
+
+1- Segun la cantidad de operandos 
+2- Cantidad de parametros de entrada
+3- operadores de conversion implicito o explicito
+4- implicita no va a haber perdida de datos se hace directamente , explicita se pueden perder datos
+5- casting: compilador es algo mas sin cambiarlo, el valor no cambia
+	converting: decirle a programa que use metodos para decirle que un tipo cambia y crea un nuevo valor (se puede o no perder info )
+	parsing:  interpretar un string y convertirlo en algo mas, cambiar un string a un tipo de dato.

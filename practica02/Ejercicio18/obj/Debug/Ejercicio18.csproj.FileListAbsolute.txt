@@ -1,7 +1,0 @@
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica02\Ejercicio18\bin\Debug\Ejercicio18.exe.config
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica02\Ejercicio18\bin\Debug\Ejercicio18.exe
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica02\Ejercicio18\bin\Debug\Ejercicio18.pdb
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica02\Ejercicio18\obj\Debug\Ejercicio18.csprojAssemblyReference.cache
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica02\Ejercicio18\obj\Debug\Ejercicio18.csproj.CoreCompileInputs.cache
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica02\Ejercicio18\obj\Debug\Ejercicio18.exe
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica02\Ejercicio18\obj\Debug\Ejercicio18.pdb

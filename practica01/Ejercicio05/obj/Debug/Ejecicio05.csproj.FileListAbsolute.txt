@@ -1,7 +1,0 @@
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica01\Ejecicio05\bin\Debug\Ejecicio05.exe.config
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica01\Ejecicio05\bin\Debug\Ejecicio05.exe
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica01\Ejecicio05\bin\Debug\Ejecicio05.pdb
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica01\Ejecicio05\obj\Debug\Ejecicio05.csprojAssemblyReference.cache
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica01\Ejecicio05\obj\Debug\Ejecicio05.csproj.CoreCompileInputs.cache
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica01\Ejecicio05\obj\Debug\Ejecicio05.exe
-C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\practica01\Ejecicio05\obj\Debug\Ejecicio05.pdb
