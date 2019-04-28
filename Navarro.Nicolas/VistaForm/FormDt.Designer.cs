@@ -143,8 +143,9 @@
             this.buttonValidar.TabIndex = 11;
             this.buttonValidar.Text = "Validar";
             this.buttonValidar.UseVisualStyleBackColor = true;
+            this.buttonValidar.Click += new System.EventHandler(this.buttonValidar_Click);
             // 
-            // Form1
+            // FormDt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -161,7 +162,7 @@
             this.Controls.Add(this.labelApellido);
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.labelNombre);
-            this.Name = "FormDT";
+            this.Name = "FormDt";
             this.Text = "FormDT";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownEdad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDni)).EndInit();

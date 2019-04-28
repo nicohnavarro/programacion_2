@@ -23,13 +23,29 @@ namespace VistaForm
             int edad;
             int dni;
             int experiencia;
-            bool a =int.TryParse(numericUpDownEdad.ToString(), out edad);
-            bool b = int.TryParse(numericUpDownDni.ToString(), out dni);
-            bool c = int.TryParse(numericUpDownExperiencia.ToString(), out experiencia);
+            bool a =int.TryParse(numericUpDownEdad.Value.ToString(), out edad);
+            bool b = int.TryParse(numericUpDownDni.Value.ToString(), out dni);
+            bool c = int.TryParse(numericUpDownExperiencia.Value.ToString(), out experiencia);
             if(a && b && c)
             {
-                dt = new DirectorTecnico(textBoxNombre.ToString(), textBoxApellido.ToString(), edad, dni, experiencia);
+                dt = new DirectorTecnico(textBoxNombre.ToString(), textBoxApellido.ToString(),edad, dni, experiencia);
                 MessageBox.Show("Se ha creado el DT!", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private void buttonValidar_Click(object sender, EventArgs e)
+        {
+            if(dt is null)
+            {
+                MessageBox.Show("“Aún no se ha creado el DT del formulario");
+            }
+            else if(dt.ValidarAptitud())
+            {
+                MessageBox.Show("El DT es apto.");
+            }
+            else
+            {
+                MessageBox.Show("El DT no es apto.");
             }
         }
     }
