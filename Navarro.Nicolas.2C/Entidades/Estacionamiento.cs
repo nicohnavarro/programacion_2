@@ -16,7 +16,7 @@ namespace Entidades
         {
             vehiculos = new List<Vehiculo>();
         }
-        public Estacionamiento(string nombre,int espacioDisponible)
+        public Estacionamiento(string nombre,int espacioDisponible):this()
         {
             this.nombre = nombre;
             this.espacioDisponible = espacioDisponible;
@@ -26,18 +26,12 @@ namespace Entidades
         {
             StringBuilder informacion = new StringBuilder();
             informacion.AppendFormat("Nombre: {0}\n", e.nombre);
-            if (e.vehiculos != null)
+
+            informacion.AppendFormat("Espacio Disponible : {0}\n", e.espacioDisponible - e.vehiculos.Count);
+            foreach (Vehiculo vehiculo in e.vehiculos)
             {
-                informacion.AppendFormat("Espacio Disponible : {0}\n", e.espacioDisponible - e.vehiculos.Count);
-                foreach (Vehiculo vehiculo in e.vehiculos)
-                {
-                    informacion.Append(vehiculo.ConsultarDatos());
-                    informacion.AppendLine();
-                }
-            }
-            else
-            {
-                informacion.AppendLine("NO hay estacionamiento");
+                informacion.Append(vehiculo.ConsultarDatos());
+                informacion.AppendLine();
             }
             return informacion.ToString();
         }
@@ -57,7 +51,7 @@ namespace Entidades
             }
             else
             {
-                retorno = "El vehículo no es parte del estacionamiento";
+                retorno = "\n-----NO ES PARTE DEL ESTACIONAMIENTO-----\n" + v.ConsultarDatos()+ "-.-.-.-.-.-.-.-\n";
             }
             return retorno;
         }
@@ -74,7 +68,7 @@ namespace Entidades
         public static bool operator ==(Estacionamiento estacionamiento, Vehiculo vehiculo)
         {
             bool retorno;
-            if(estacionamiento.vehiculos!=null && estacionamiento.vehiculos.Contains(vehiculo))
+            if(estacionamiento.vehiculos.Contains(vehiculo))
             {
                 retorno = true;
             }

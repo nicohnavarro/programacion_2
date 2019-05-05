@@ -28,7 +28,7 @@ namespace VistaForm
             bool c = int.TryParse(numericUpDownExperiencia.Value.ToString(), out experiencia);
             if(a && b && c)
             {
-                dt = new DirectorTecnico(textBoxNombre.ToString(), textBoxApellido.ToString(),edad, dni, experiencia);
+                dt = new DirectorTecnico(textBoxNombre.Text, textBoxApellido.Text,edad, dni, experiencia);
                 MessageBox.Show("Se ha creado el DT!", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
@@ -37,15 +37,20 @@ namespace VistaForm
         {
             if(dt is null)
             {
-                MessageBox.Show("“Aún no se ha creado el DT del formulario");
+                MessageBox.Show("Aún no se ha creado el DT del formulario");
             }
             else if(dt.ValidarAptitud())
             {
                 MessageBox.Show("El DT es apto.");
+                MessageBox.Show(dt.Mostrar());
+                TextBox info = new TextBox();
+                info.Text = dt.Mostrar();
+                info.Show();
             }
             else
             {
                 MessageBox.Show("El DT no es apto.");
+                MessageBox.Show(dt.Mostrar());
             }
         }
     }

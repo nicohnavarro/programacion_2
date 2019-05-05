@@ -14,8 +14,8 @@ namespace Entidades
         public override string ConsultarDatos()
         {
             StringBuilder informacion = new StringBuilder();
-            informacion.AppendLine("*********************************************");
-            informacion.AppendFormat("Modelo : {0} \n Valor Hora: $ {1} \n", this.modelo, PickUp.valorHora);
+            informacion.AppendLine("\nCONSULTA");
+            informacion.AppendFormat("{0}\nModelo: {1}\nValor Hora: $ {2} \n", this.ToString(), this.modelo, PickUp.valorHora);
             return informacion.ToString();
         }
 
@@ -27,12 +27,12 @@ namespace Entidades
         public override string ImprimirTicket()
         {
             StringBuilder info = new StringBuilder();
-            int cantidadHoras;
-            DateTime horaActual = DateTime.Now;
-            cantidadHoras = horaActual.Hour - base._ingreso.Hour;
-
-            info.AppendFormat("Costo de Estadia : ${0}", cantidadHoras * PickUp.valorHora);
-            return this.ConsultarDatos() + base.ImprimirTicket();
+            TimeSpan ts = new TimeSpan();
+            ts = DateTime.Now - base._ingreso;
+            int estadia = ts.Hours;
+            float precio = estadia * valorHora;
+            info.AppendFormat("Estadia:{0} - Costo de Estadia: ${1}\n\n",estadia,precio);
+            return base.ImprimirTicket()+info.ToString();
         }
          static PickUp()
          {

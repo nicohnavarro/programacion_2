@@ -19,9 +19,13 @@ namespace Entidades
             }
             set
             {
-                if(value.Length<6)
+                if(value.Length==6)
                 {
                     this.patente = value;
+                }
+                else
+                {
+                    this.patente = "Error de Patente";
                 }
             }
         }
@@ -31,14 +35,14 @@ namespace Entidades
         public virtual string ImprimirTicket()
         {
             StringBuilder informacion = new StringBuilder();
-            informacion.AppendLine("*********************************************");
-            informacion.AppendFormat("{0} \nFecha: {1} \nHora: {2}\n", this.ToString(), _ingreso.Date, _ingreso.Hour);
+            informacion.AppendLine("*****************************");
+            informacion.AppendFormat("{0}\nFecha de Ingreso: {1}\nFecha de Egreso: {2}\n", this.ToString(), _ingreso.TimeOfDay,DateTime.Now.TimeOfDay);
             return informacion.ToString();
         }
 
         public static bool operator==(Vehiculo v1,Vehiculo v2)
         {
-            return v1.Patente == v2.Patente && v1.Equals(v2) ? true : false;
+            return v1.Patente == v2.Patente && v1.Equals(v2) && v1.GetType()==v2.GetType() ? true : false;
         }
 
         public static bool operator !=(Vehiculo v1, Vehiculo v2)
@@ -48,12 +52,16 @@ namespace Entidades
 
         public override string ToString()
         {
-            return String.Format("Patente {0}", Patente);
+            StringBuilder mostrar = new StringBuilder();
+            mostrar.AppendFormat("Patente: {0}", this.Patente);
+
+            return mostrar.ToString();
         }
 
         public Vehiculo(string patente)
         {
             Patente = patente;
+            this._ingreso = new DateTime();
             this._ingreso = DateTime.Now.AddHours(-3);
         }
 

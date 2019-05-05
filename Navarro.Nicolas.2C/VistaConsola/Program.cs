@@ -12,7 +12,7 @@ namespace VistaConsola
         static void Main(string[] args)
         {
 
-            Estacionamiento e = new Estacionamiento("UTN", 6);
+            Estacionamiento e = new Estacionamiento("UTN", 7);
             // Creación de Vehículos
             Console.WriteLine("MOTOS");
             Vehiculo m1 = new Moto("ASD123", 75, 4);
