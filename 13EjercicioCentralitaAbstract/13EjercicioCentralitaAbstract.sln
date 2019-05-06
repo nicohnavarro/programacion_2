@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CentralitaHerencia", "Centr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VistaConsola", "VistaConsola\VistaConsola.csproj", "{BDADC06D-CCF1-4BA0-952F-C702B0B9C22F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VistaForm", "VistaForm\VistaForm.csproj", "{C873CFDA-CE76-4652-ABF8-D71469543E17}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{BDADC06D-CCF1-4BA0-952F-C702B0B9C22F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDADC06D-CCF1-4BA0-952F-C702B0B9C22F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDADC06D-CCF1-4BA0-952F-C702B0B9C22F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C873CFDA-CE76-4652-ABF8-D71469543E17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C873CFDA-CE76-4652-ABF8-D71469543E17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C873CFDA-CE76-4652-ABF8-D71469543E17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C873CFDA-CE76-4652-ABF8-D71469543E17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
