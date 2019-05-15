@@ -15,15 +15,19 @@ namespace ComiqueriaApp
     {
         Comiqueria comiqueriaVe;
         Producto productoVe;
-        int cantidad=1;
-        
-        public VentasForm(Comiqueria comiqueria,Producto producto)
+        int cantidad;
+        public VentasForm()
         {
-            comiqueriaVe = comiqueria;
-            productoVe = producto;
             InitializeComponent();
+        }
+
+        public VentasForm(Comiqueria comiqueria,Producto producto):this()
+        {
+            this.comiqueriaVe = comiqueria;
+            this.productoVe = producto;
+            this.cantidad = 1;
             lblDescripcion.Text = producto.Descripcion;
-            lblPrecioFinal2.Text = (productoVe.Precio * cantidad).ToString();
+            lblPrecioFinal2.Text = Venta.CalcularPrecioFinal(productoVe.Precio, cantidad).ToString();
 
         }
 
@@ -36,7 +40,7 @@ namespace ComiqueriaApp
         private void numericUpDownCantidad_ValueChanged(object sender, EventArgs e)
         {
             this.cantidad =(int) numericUpDownCantidad.Value;
-            lblPrecioFinal2.Text = (productoVe.Precio * cantidad).ToString();
+            lblPrecioFinal2.Text=Venta.CalcularPrecioFinal(productoVe.Precio, cantidad).ToString();
         }
 
         private void btnVender_Click(object sender, EventArgs e)

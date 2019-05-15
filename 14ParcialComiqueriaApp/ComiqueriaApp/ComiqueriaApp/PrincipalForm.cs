@@ -86,6 +86,7 @@ namespace ComiqueriaApp
             DialogResult result = ventasForm.ShowDialog(); //Agregar código para abrir ventasForm de forma MODAL
             if (result == DialogResult.OK)
             {
+
                 this.richTextBoxVentas.Text = this.comiqueria.ListarVentas();
             }
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ComiqueriaLogic
 {
-    sealed class Venta
+    public sealed class Venta
     {
         private DateTime fecha;
         static int porcentajelva;
@@ -18,8 +18,8 @@ namespace ComiqueriaLogic
         public static double CalcularPrecioFinal(double precioUnidad,int cantidad)
         {
             double resultado;
-            resultado = precioUnidad * cantidad;
-            resultado *= porcentajelva/100;
+            double precioIva=(porcentajelva* precioUnidad) / 100;
+            resultado = (precioIva+precioUnidad) * cantidad;
             return resultado;
         }
 
@@ -32,7 +32,7 @@ namespace ComiqueriaLogic
 
         private void Vender(int cantidad)
         {
-            producto.Stock -= 1;
+            this.producto.Stock -= cantidad;
             this.fecha = new DateTime();
             this.fecha = DateTime.Now;
             this.precioFinal = CalcularPrecioFinal(this.producto.Precio,cantidad);
