@@ -47,12 +47,12 @@ namespace ComiqueriaApp
         {
             if(cantidad>productoVe.Stock)
             {
-                MessageBox.Show("Supero el stock disponible \n", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Supero el stock disponible \n", "ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             if(cantidad<=productoVe.Stock)
             {
                 comiqueriaVe.Vender(productoVe, cantidad);
-                MessageBox.Show("Se Vendio..!","ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Se Vendio..!","ATENCION", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 DialogResult = DialogResult.OK;
                 
             }

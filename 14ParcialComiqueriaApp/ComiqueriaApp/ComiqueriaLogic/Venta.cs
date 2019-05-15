@@ -13,7 +13,7 @@ namespace ComiqueriaLogic
         private double precioFinal;
         private Producto producto;
 
-        public DateTime Fecha { get { return this.fecha; } }
+        internal DateTime Fecha { get { return this.fecha; } }
 
         public static double CalcularPrecioFinal(double precioUnidad,int cantidad)
         {
@@ -43,7 +43,7 @@ namespace ComiqueriaLogic
             porcentajelva = 21;
         }
 
-        public Venta(Producto p,int cantidad)
+        internal Venta(Producto p,int cantidad)
         {
             this.producto = p;
             Vender(cantidad);
