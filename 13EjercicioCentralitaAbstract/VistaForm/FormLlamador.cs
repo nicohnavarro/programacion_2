@@ -81,23 +81,37 @@ namespace VistaForm
             duracion = aleatorio.Next(1,51);
             costoL = aleatorio.Next(0,6);
             // Carga
-            cmbFranja.DataSource = Enum.GetValues(typeof(Franja));
+            cmbFranja.DataSource = Enum.GetValues(typeof(Provincial.Franja));
             // Lectura
-            Franja franjas;
-            Enum.TryParse<Franja>(cmbFranja.SelectedValue.ToString(), out franjas);
+            Provincial.Franja franjas;
+            Enum.TryParse<Provincial.Franja>(cmbFranja.SelectedValue.ToString(), out franjas);
 
             if (cmbFranja.Enabled)
             {
-                Provincial llamadaP = new Provincial(txtBoxNroOrigen.Text, franjas, duracion, txtBoxNroDestino.Text);
-                central+= llamadaP;
-                MessageBox.Show(llamadaP.ToString());
+                try
+                {
+                    Provincial llamadaP = new Provincial(txtBoxNroOrigen.Text, franjas, duracion, txtBoxNroDestino.Text);
+                    central += llamadaP;
+                    MessageBox.Show(llamadaP.ToString());
+                }
+                catch(CentralitaException centralitaE)
+                {
+                    MessageBox.Show(centralitaE.Message, "Atencion", MessageBoxButtons.OK,MessageBoxIcon.Error);
+                }
             }
             else
             {
-                
-                Local llamadaL = new Local(txtBoxNroOrigen.Text,duracion, txtBoxNroDestino.Text, costoL);
-                central += llamadaL;
-                MessageBox.Show(llamadaL.ToString());
+                try
+                {
+                    Local llamadaL = new Local(txtBoxNroOrigen.Text, duracion, txtBoxNroDestino.Text, costoL);
+                    central += llamadaL;
+                    MessageBox.Show(llamadaL.ToString());
+                }
+                catch(CentralitaException centralitaE)
+                {
+                    MessageBox.Show(centralitaE.Message, "Atencion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
     }

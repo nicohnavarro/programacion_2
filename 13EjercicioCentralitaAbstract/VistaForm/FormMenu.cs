@@ -38,7 +38,7 @@ namespace VistaForm
             {
                 MessageBox.Show(centralita.ToString());
             }
-            else
+            else if(centralita.Equals(null))
             {
                 MessageBox.Show("No hay llamadas");
             }

@@ -6,16 +6,14 @@ using System.Threading.Tasks;
 
 namespace CentralitaHerencia
 {
-    public enum Franja
-    {
-        Franja_1,
-        Franja_2,
-        Franja_3
-    }
-
     public class Provincial:Llamada
     {
-        
+        public enum Franja
+        {
+            Franja_1,
+            Franja_2,
+            Franja_3
+        }
 
         protected Franja franjaHoraria;
 
