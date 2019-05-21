@@ -9,7 +9,7 @@ namespace Carrera
     public class MotoCross:VehiculoDeCarrera
     {
         private short cilindrada;
-        public short Cilindrada { get; set; }
+        public short Cilindrada { get {return this.cilindrada; } set {this.cilindrada=value; } }
 
         public override string MostrarDatos()
         {
