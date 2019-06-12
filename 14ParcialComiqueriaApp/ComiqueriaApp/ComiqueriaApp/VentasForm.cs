@@ -27,7 +27,8 @@ namespace ComiqueriaApp
             this.productoVe = producto;
             this.cantidad = 1;
             lblDescripcion.Text = producto.Descripcion;
-            lblPrecioFinal2.Text = Venta.CalcularPrecioFinal(productoVe.Precio, cantidad).ToString();
+            lblPrecioFinal2.Text = string.Format("{0:#,###.00}",
+            Venta.CalcularPrecioFinal(productoVe.Precio, cantidad).ToString());
 
         }
 
@@ -40,7 +41,7 @@ namespace ComiqueriaApp
         private void numericUpDownCantidad_ValueChanged(object sender, EventArgs e)
         {
             this.cantidad =(int) numericUpDownCantidad.Value;
-            lblPrecioFinal2.Text=Venta.CalcularPrecioFinal(productoVe.Precio, cantidad).ToString();
+            lblPrecioFinal2.Text=string.Format("{0,-10:#,###.00}",Venta.CalcularPrecioFinal(productoVe.Precio, cantidad).ToString());
         }
 
         private void btnVender_Click(object sender, EventArgs e)

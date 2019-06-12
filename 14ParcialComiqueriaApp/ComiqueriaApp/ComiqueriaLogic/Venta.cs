@@ -26,7 +26,7 @@ namespace ComiqueriaLogic
         public string ObtenerDescripcionBreve()
         {
             StringBuilder sc = new StringBuilder();
-            sc.AppendFormat("{0}-{1}-{2,10:#,###.00\n}", this.fecha, this.producto.Descripcion, this.precioFinal);
+            sc.AppendFormat("{0}-{1}-{2,10:0.00}\n", this.fecha, this.producto.Descripcion, this.precioFinal);
             return sc.ToString();
         }
 

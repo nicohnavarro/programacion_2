@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Carrera
 {
-    public class Competencia
+    public class Competencia<T> where T : VehiculoDeCarrera
     {
         public enum TipoCompetencia
         {
@@ -14,10 +14,10 @@ namespace Carrera
         }
         private short cantidadCompetidores;
         private short cantidadVueltas;
-        private List<VehiculoDeCarrera> competidores;
+        private List<T> competidores;
         private TipoCompetencia tipo;
 
-        public List<VehiculoDeCarrera> VehiculosDeCompetencia { get {return this.competidores; } }
+        public List<T> VehiculosDeCompetencia { get {return this.competidores; } }
         public short CantidadCompetidores { get { return this.cantidadCompetidores; } set { this.cantidadCompetidores = value; } }
         public short CantidadVueltas { get {return this.cantidadVueltas; } set {this.cantidadVueltas=value; } }
         public VehiculoDeCarrera this[int i] { get { return competidores[i]; } }
@@ -25,7 +25,7 @@ namespace Carrera
 
         private Competencia()
         {
-            competidores = new List<VehiculoDeCarrera>();
+            competidores = new List<T>();
         }
         public Competencia(short cantVueltas, short cantCompetidores, TipoCompetencia tipo) : this()
         {
@@ -43,11 +43,11 @@ namespace Carrera
 
             return sc.ToString();
         }
-        public static bool operator !=(Competencia c, VehiculoDeCarrera a)
+        public static bool operator !=(Competencia<T> c, VehiculoDeCarrera a)
         {
             return (!(c == a));
         }
-        public static bool operator ==(Competencia c, VehiculoDeCarrera a)
+        public static bool operator ==(Competencia<T> c, VehiculoDeCarrera a)
         {
             bool retorno = false;
             if (c.Tipo == TipoCompetencia.MotoCross && a is MotoCross)
@@ -64,7 +64,7 @@ namespace Carrera
             }
             return retorno;
         }
-        public static bool operator +(Competencia c, VehiculoDeCarrera a)
+        public static bool operator +(Competencia<T>c, VehiculoDeCarrera a)
         {
             bool retorno = false;
 
@@ -72,7 +72,7 @@ namespace Carrera
             {
                 if (c == a)
                 {
-                    c.competidores.Add(a);
+                    c.competidores.Add((T)a);
                     retorno = true;
                 }
             }
@@ -82,10 +82,10 @@ namespace Carrera
             }
             return retorno;
         }
-        public static bool operator -(Competencia c, VehiculoDeCarrera a)
+        public static bool operator -(Competencia<T> c, VehiculoDeCarrera a)
         {
             bool retorno = false;
-            c.competidores.Remove(a);
+            c.competidores.Remove((T)a);
             retorno = true;
             return retorno;
         }
