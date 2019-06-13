@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio51
 {
-    public class Centralita
+    public class Centralita:IGuardar<string>
     {
         #region Centralita Atributtes
         private List<Llamada> listaDeLlamadas;
@@ -109,6 +109,27 @@ namespace Ejercicio51
             listaDeLlamadas.Sort();
         }
         #endregion
+
+        public bool Guardar()
+        {
+
+            return true;
+        }
+        public string Leer()
+        {
+            throw new NotImplementedException();
+        }
+        public string RutaDeArchivo
+        {
+            get
+            {
+                return "";
+            }
+            set
+            {
+
+            }
+        }
     
     }
 }

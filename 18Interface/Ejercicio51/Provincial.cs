@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ejercicio51
 {
-    public class Provincial : Llamada
+    public class Provincial : Llamada, IGuardar<Provincial>
     {
         #region Provincial Atributtes
         protected Franja franjaHoraria;
@@ -76,5 +76,15 @@ namespace Ejercicio51
             Franja_1, Franja_2, Franja_3
         }
         #endregion
+
+        public bool Guardar()
+        {
+            throw new NotImplementedException();
+        }
+        public Provincial Leer()
+        {
+            throw new NotImplementedException();
+        }
+        public string RutaDeArchivo { get; set; }
     }
 }
