@@ -10,7 +10,7 @@ namespace Ejercicio54
     {
         static void Main(string[] args)
         {
-            string nombreArchivo = ("C:\\src\\" + DateTime.Now.ToString("yyyyMMdd-HHmm") + ".txt");
+            string nombreArchivo = (@"C:\" + DateTime.Now.ToString("yyyyMMdd-HHmm") + ".txt");
             //string inners = "";
             try
             {

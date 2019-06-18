@@ -19,7 +19,8 @@ namespace VistaConsola
             Provincial l4 = new Provincial(Provincial.Franja.Franja_3, l2);
             // Las llamadas se irán registrando en la Centralita.
             // La centralita mostrará por pantalla todas las llamadas según las vaya registrando.
-
+            l1.Guardar();
+            l3.Guardar();
             try
             {
                 c += l1;
