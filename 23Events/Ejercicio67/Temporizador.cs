@@ -8,59 +8,42 @@ using System.Threading;
 namespace Ejercicio67
 {
 
-
+    public delegate void TempDelegado();
     public sealed class Temporizador
     {
-        public delegate void encargadoTiempo();
-        public event encargadoTiempo EventoTiempo;
 
-        private Thread hilo;
-        private int intervalo;
-
-        public bool Activo
+        public event TempDelegado EventoTiempo;
+     
+        private int interval;
+        private bool isCorriendo;
+        
+        
+        public int Intervalo
         {
             get
             {
-                bool retorno = false;
-                if (hilo != null && hilo.IsAlive == true)
-                {
-                    retorno = true;
-                }
-                return retorno;
+                return this.interval;
             }
             set
             {
-                if ((value == true && hilo != null))
-                {
-                    hilo = new Thread(Corriendo);
-                    hilo.Start();
-                }
-            }
-        }
-        public int Intevalo
-        {
-            get
-            {
-                return 0;
-            }
-            set
-            {
-                ;
+                this.interval=value;
             }
         }
 
         public Temporizador(int intervalo)
         {
-            this.Intevalo = intervalo;
+            this.interval = intervalo;
+            this.isCorriendo = false;
         }
 
-        private void Corriendo()
+        public void Corriendo()
         {
-            while (true)
+            this.isCorriendo = true;
+            do
             {
-                EventoTiempo();
-                Thread.Sleep(this.Intevalo);
-            }
+                System.Threading.Thread.Sleep(this.Intervalo);
+                this.EventoTiempo();
+            } while (this.isCorriendo);
         }
 
 
