@@ -40,6 +40,7 @@ namespace ComiqueriaApp
 
         private void numericUpDownCantidad_ValueChanged(object sender, EventArgs e)
         {
+            invokere
             this.cantidad =(int) numericUpDownCantidad.Value;
             lblPrecioFinal2.Text=string.Format("{0,-10:#,###.00}",Venta.CalcularPrecioFinal(productoVe.Precio, cantidad).ToString());
         }

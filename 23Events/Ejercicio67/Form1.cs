@@ -30,8 +30,8 @@ namespace Ejercicio67
         {
             if (this.lblMostrar.InvokeRequired)
             {
-                TempDelegado d = new TempDelegado(T_evento);
-                this.Invoke(d);
+                encargadoTiempo del = new encargadoTiempo(T_evento);
+                this.Invoke(del);
             }
             else
             {
