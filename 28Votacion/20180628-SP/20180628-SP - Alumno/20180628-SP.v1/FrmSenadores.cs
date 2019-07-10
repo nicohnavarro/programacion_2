@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -51,7 +52,8 @@ namespace _20180628_SP.v1
         {
             if (this.groupBox2.InvokeRequired)
             {
-                Votacion.NOMBRE_EVENTO recall = new Votacion.NOMBRE_EVENTO(this.ManejadorVoto);
+                
+                Votacion.Voto recall = new Votacion.Voto(this.ManejadorVoto);
                 this.Invoke(recall, new object[] { senador, voto });
             }
             else
@@ -87,7 +89,13 @@ namespace _20180628_SP.v1
                 {
                     MessageBox.Show((int.Parse(lblAfirmativo.Text) - int.Parse(lblNegativo.Text)) > 0 ? "Es Ley" : "No es Ley", txtLeyNombre.Text);
                     // Guardar resultados
-
+                    VotacionDAO db = new VotacionDAO();
+                    SerializarXML<Votacion> Xml = new SerializarXML<Votacion>();
+                    string path = string.Format(@"{0}\Votacion.xml", Environment.GetFolderPath(Environment.SpecialFolder.Desktop));
+                    if (db.Guardar("Votaciones", this.votacion))
+                        MessageBox.Show("Se ha guardado en data base", "Atencion", MessageBoxButtons.OK);
+                    if (Xml.Guardar(path, this.votacion))
+                        MessageBox.Show("Se ha guardado en Xml", "Atencion", MessageBoxButtons.OK);
                 }
             }
         }
@@ -107,9 +115,10 @@ namespace _20180628_SP.v1
             lblAbstenciones.Text = "0";
 
             // EVENTO
-
+            this.votacion.EventoVotoEfectuado += ManejadorVoto;
             // THREAD
-
+            Thread hilo = new Thread(this.votacion.Simular);
+            hilo.Start();
         }
     }
 }

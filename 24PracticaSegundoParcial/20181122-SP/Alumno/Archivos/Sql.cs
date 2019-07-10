@@ -16,7 +16,7 @@ namespace Archivos
 
         public Sql()
         {
-            string connectionStr = @"Data Source= .\SQLEXPRESS; Initial Cantalog=msdb4; Integrated Security= True";
+            string connectionStr = @"Data Source= .\SQLEXPRESS; Initial Catalog=msdb4; Integrated Security= True";
             try
             {
                 conexion = new SqlConnection(connectionStr);
