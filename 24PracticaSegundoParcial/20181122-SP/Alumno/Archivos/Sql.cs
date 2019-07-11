@@ -16,7 +16,7 @@ namespace Archivos
 
         public Sql()
         {
-            string connectionStr = @"Data Source= .\SQLEXPRESS; Initial Catalog=msdb4; Integrated Security= True";
+            string connectionStr = @"Data Source= .\SQLEXPRESS; Initial Catalog=patentes-sp-2018; Integrated Security= True";
             try
             {
                 conexion = new SqlConnection(connectionStr);
@@ -27,11 +27,6 @@ namespace Archivos
             catch(Exception e)
             {
                 throw e;
-            }
-            finally
-            {
-                if (conexion.State == ConnectionState.Open)
-                    conexion.Close();
             }
         }
 

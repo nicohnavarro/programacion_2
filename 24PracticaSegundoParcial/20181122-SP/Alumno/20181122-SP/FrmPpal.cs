@@ -43,7 +43,7 @@ namespace _20181122_SP
             try
             {
                 List<Patente> lista;
-                new Xml<List<Patente>>().Leer(@"C:\zzz\patentes.xml", out lista);
+                new Xml<List<Patente>>().Leer(@"C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\24PracticaSegundoParcial\20181122-SP\patentes.xml", out lista);
                 cola = new Queue<Patente>(lista.AsEnumerable().Reverse());
             }
             catch (Exception ex)
@@ -57,7 +57,7 @@ namespace _20181122_SP
         {
             try
             {
-                new Texto().Leer(@"C:\zzz\patentes.txt", out cola);
+                new Texto().Leer(@"C:\Users\nicolas\Desktop\nicolas\utnProg\programacion_2\24PracticaSegundoParcial\20181122-SP\patentes.txt", out cola);
             }
             catch (Exception ex)
             {
