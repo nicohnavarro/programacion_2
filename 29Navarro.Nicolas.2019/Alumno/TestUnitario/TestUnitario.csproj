@@ -59,6 +59,10 @@
       <Project>{1e3d90b3-62c3-4ab1-a205-a8d477197c87}</Project>
       <Name>Navarro.Nicolas.2019</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Archivos\Archivos.csproj">
+      <Project>{f6499095-625e-4108-a329-1b0066379a88}</Project>
+      <Name>Archivos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Controles\Controles.csproj">
       <Project>{d17dfa26-2f8d-457f-8ad2-0b7df2821bfc}</Project>
       <Name>Controles</Name>

@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Archivos;
 
 namespace TestUnitario
 {
@@ -9,7 +10,13 @@ namespace TestUnitario
         [TestMethod]
         public void TestMethodArchivosXML()
         {
+            string stringAGuardar = "XmlPrueba";
+            string stringLeido="";
 
+            if (Archivos.Xml<string>.Guardar(stringAGuardar))
+                stringLeido = Archivos.Xml<string>.Leer();
+
+            Assert.AreEqual(stringAGuardar, stringLeido);
         }
     }
 }

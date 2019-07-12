@@ -11,7 +11,6 @@ using Entidades;
 
 namespace Controles
 {
-    [Serializable]
     public partial class Vuelo : UserControl,IAvion
     {
         private Avion miAvion;
@@ -22,6 +21,7 @@ namespace Controles
             miAvion.ReportarEstado += MoverAvion;
 
         }
+
         public Avion.EstadoVuelo Estado
         {
             get

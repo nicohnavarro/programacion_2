@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entidades
 {
-    [Serializable]
     public class Aeropuerto<T> where T:IAvion
     {
         //Atributos
+        //public List<T> vuelos;
         private List<T> vuelos;
-
 
         //public List<T> Vuelos { get { return this.vuelos; } set { this.vuelos = value; } }
         //Constructor
